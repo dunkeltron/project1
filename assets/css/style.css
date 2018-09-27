@@ -1,0 +1,11 @@
+.mainContainer{
+    margin: auto;
+    text-align: center;
+    max-width: 60%;
+}
+
+.selectedTabResults,
+.topContainer,
+.submitClearContainer{
+    border: black 1px dashed
+}

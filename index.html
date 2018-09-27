@@ -4,9 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Test UI Page</title>
+
+     <!-- Reset CSS link -->
+     <link rel="stylesheet" type="text/css" href="reset.css">
+
+     <!-- CSS link -->
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Javascript Link -->
+    <script src="javascript.js"></script>
+
+
 </head>
 <body>
-    
+
+    <!-- Main Container -->
+    <div class ="mainContainer">
+
+    <!-- Top Container -->
+    <div class = "topContainer">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Hungry for More (tenative title)</h1>
+                <p class="lead">Project 1: UW Coding Bootcamp</p>
+            </div>
+        </div>
+
+        <!-- Buttons/Tabs for Navigation -->
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id = "IngredientsTab">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id = "CategoryTab">Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id = "RegionTab">Region</a>
+            </li>
+            </ul>
+
+        <!-- div for class after selecting tab -->
+        <div class="selectedTabResults">
+
+            <!-- Data Visualization Image-->
+            <div class = "dataViz">
+                <p>Data Visualization image goes here</p>
+            </div> 
+
+            <div class = "input"></div>
+
+            <!-- Dropdown Button -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown for Selection
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                </div>
+            </div>
+
+            <!-- Submit and Clear Buttons -->
+            <div class = "submitClearContainer">
+                <button type="button" class="btn btn-danger">Submit</button>
+                <button type="button" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+        <!-- Returned Values -->
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-Result1-list" data-toggle="list" href="#list-Result1" role="tab" aria-controls="Result1">Result1</a>
+                <a class="list-group-item list-group-item-action" id="list-Result2-list" data-toggle="list" href="#list-Result2" role="tab" aria-controls="Result2">Result2</a>
+                <a class="list-group-item list-group-item-action" id="list-Result3-list" data-toggle="list" href="#list-Result3" role="tab" aria-controls="Result3">Result3</a>
+                <a class="list-group-item list-group-item-action" id="list-Result4-list" data-toggle="list" href="#list-Result4" role="tab" aria-controls="Result4">Result4</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-Result1" role="tabpanel" aria-labelledby="list-Result1-list">Stuff Goes Here</div>
+                <div class="tab-pane fade" id="list-Result2" role="tabpanel" aria-labelledby="list-Result2-list">Stuff Goes Here</div>
+                <div class="tab-pane fade" id="list-Result3" role="tabpanel" aria-labelledby="list-Result3-list">Stuff Goes Here</div>
+                <div class="tab-pane fade" id="list-Result4" role="tabpanel" aria-labelledby="list-Result4-list">Stuff Goes Here</div>
+                </div>
+            </div>
+            </div>
+
+    </div>  
+
+    </div>
+
+    <!-- BootStrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
