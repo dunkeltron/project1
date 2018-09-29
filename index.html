@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test UI Page</title>
 
-     <!-- Reset CSS link -->
-     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Reset CSS link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-     <!-- CSS link -->
-    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- BootStrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
 
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,77 +24,84 @@
     <script src="assets/javascript/javascript.js"></script>
 
 </head>
+
 <body>
 
     <!-- Main Container -->
-    <div class ="mainContainer">
+    <div class="mainContainer">
 
-    <!-- Top Container -->
-    <div class = "topContainer">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Hungry for More (tenative title)</h1>
-                <p class="lead">Project 1: UW Coding Bootcamp</p>
+        <!-- Top Container -->
+        <div class="topContainer">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Hungry for More (tenative title)</h1>
+                    <p class="lead">Project 1: UW Coding Bootcamp</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Buttons/Tabs for Navigation -->
-        <ul class="nav nav-tabs justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#" id = "CategoryTab" aria-selected="true">Category</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" id = "AreaTab" aria-selected="false">Area</a>
-            </li>
+            <!-- Buttons/Tabs for Navigation -->
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="CategoryTab" aria-selected="true">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="AreaTab" aria-selected="false">Area</a>
+                </li>
             </ul>
 
-        <!-- div for class after selecting tab -->
-        <div class="selectedTabResults">
+            <!-- div for class after selecting tab -->
+            <div class="selectedTabResults">
+                <div class="row">
 
-            <!-- Data Visualization Image-->
-            <div id = "pieChart"></div> 
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" data-flip="false" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown for Selection
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        </div>
+                    </div>
+                    <!-- Data Visualization Image-->
+                    <div class="col-1"></div>
+                    <!-- category graph-->
+                    <div id="pieChart"></div>
 
-            <div id = "pieChart1"></div> 
+                    <!-- area graph -->
+                    <div id="pieChart1"></div>
 
-            <div class = "input"></div>
+                    <div class="input"></div>
 
-            <!-- Dropdown Button -->
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown for Selection
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
                 </div>
-            </div>
 
-            <!-- Submit and Clear Buttons -->
-            <!-- <div class = "submitClearContainer">
-                <button type="button" class="btn btn-danger">Submit</button>
-                <button type="button" class="btn btn-secondary">Clear</button>
-            </div> -->
+            </div>
         </div>
-
-        <!-- Returned Values -->
-        <div class="row">
-            <div id="recipe-list" class="col-4">
-                <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-Result1-list" data-toggle="list" href="#list-Result1" role="tab" aria-controls="Result1">Result1</a>
+        <br>
+        <div id="bot-container">
+            <!-- Returned Values -->
+            <div class="row">
+                <div id="recipe-list" class="col-4" style="float:left;">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-Result1-list" data-toggle="list"
+                            href="#list-Result1" role="tab" aria-controls="Result1">Result1</a>
+                    </div>
                 </div>
+                
             </div>
-            <div id="recipe-display" class="col-8">
-                <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-Result1" role="tabpanel" aria-labelledby="list-Result1-list">Stuff Goes Here</div>
+            <div id="recipe-display" class="col-8" style="float:left;">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-Result1" role="tabpanel" aria-labelledby="list-Result1-list">Stuff
+                            Goes Here</div>
+                    </div>
                 </div>
-            </div>
-            </div>
-
-    </div>  
-
+        </div>
     </div>
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <!-- Data vis cdn -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
     <!-- local graph scripts-->
@@ -100,4 +109,5 @@
     <script src="assets/javascript/graph.js"></script>
 
 </body>
+
 </html>

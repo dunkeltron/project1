@@ -1,12 +1,16 @@
 .mainContainer{
     margin: auto;
     text-align: center;
-    max-width: 60%;
+    max-width: 80%;
     padding: 20px;
 }
 
 .selectedTabResults,
 .topContainer,
 .submitClearContainer{
-    border: black 1px dashed
+    border: black 1px dashed;
+}
+
+#recipe-display{
+    border: black 1px solid;
 }
