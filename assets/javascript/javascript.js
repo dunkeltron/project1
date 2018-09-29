@@ -1,11 +1,15 @@
 $(document).ready(function() {
     console.log( "ready!" );
 
+    $("#pieChart").hide();
+
     var queryURL = ""; // declaration of empty queryURL
 
     $("#CategoryTab").on("click", function () {
         console.log("Category Tab Selected");
+
         $(".dropdown-menu").empty();
+        $("#pieChart").show();
         
     queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
 
@@ -34,6 +38,7 @@ $(document).ready(function() {
     $("#AreaTab").on("click", function () {
         console.log("Area Tab Selected");
         $(".dropdown-menu").empty();
+        $("#pieChart").hide();
 
         queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
 
