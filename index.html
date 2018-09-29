@@ -7,10 +7,10 @@
     <title>Test UI Page</title>
 
      <!-- Reset CSS link -->
-     <link rel="stylesheet" type="text/css" href="reset.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
      <!-- CSS link -->
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
 
     <!-- BootStrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,7 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Javascript Link -->
-    <script src="javascript.js"></script>
+    <script src="assets/javascript/javascript.js"></script>
 
 
 </head>
@@ -40,13 +40,13 @@
         <!-- Buttons/Tabs for Navigation -->
         <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="#" id = "IngredientsTab">Ingredients</a>
+                <a class="nav-link" href="#" id = "IngredientsTab" aria-selected="false">Ingredients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" id = "CategoryTab">Category</a>
+                <a class="nav-link" href="#" id = "CategoryTab" aria-selected="true">Category</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" id = "RegionTab">Region</a>
+                <a class="nav-link" href="#" id = "AreaTab" aria-selected="false">Area</a>
             </li>
             </ul>
 
@@ -70,10 +70,10 @@
             </div>
 
             <!-- Submit and Clear Buttons -->
-            <div class = "submitClearContainer">
+            <!-- <div class = "submitClearContainer">
                 <button type="button" class="btn btn-danger">Submit</button>
                 <button type="button" class="btn btn-secondary">Clear</button>
-            </div>
+            </div> -->
         </div>
 
         <!-- Returned Values -->
@@ -83,15 +83,12 @@
                 <a class="list-group-item list-group-item-action active" id="list-Result1-list" data-toggle="list" href="#list-Result1" role="tab" aria-controls="Result1">Result1</a>
                 <a class="list-group-item list-group-item-action" id="list-Result2-list" data-toggle="list" href="#list-Result2" role="tab" aria-controls="Result2">Result2</a>
                 <a class="list-group-item list-group-item-action" id="list-Result3-list" data-toggle="list" href="#list-Result3" role="tab" aria-controls="Result3">Result3</a>
-                <a class="list-group-item list-group-item-action" id="list-Result4-list" data-toggle="list" href="#list-Result4" role="tab" aria-controls="Result4">Result4</a>
                 </div>
             </div>
             <div class="col-8">
                 <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-Result1" role="tabpanel" aria-labelledby="list-Result1-list">Stuff Goes Here</div>
                 <div class="tab-pane fade" id="list-Result2" role="tabpanel" aria-labelledby="list-Result2-list">Stuff Goes Here</div>
-                <div class="tab-pane fade" id="list-Result3" role="tabpanel" aria-labelledby="list-Result3-list">Stuff Goes Here</div>
-                <div class="tab-pane fade" id="list-Result4" role="tabpanel" aria-labelledby="list-Result4-list">Stuff Goes Here</div>
                 </div>
             </div>
             </div>
