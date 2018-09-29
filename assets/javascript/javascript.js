@@ -120,19 +120,94 @@ $(document).ready(function() {
         var mealURL = "https://www.themealdb.com/meal/" + this.getAttribute("id");
         var jsonURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + this.getAttribute("data-id-attr");
         var mealImageURL = this.getAttribute("data-strMealThumb");
+        var header = $('<h1>' + mealString + '</h1>');
+        var contentBlock = $("<div>");
+        var contentRow= $("<div>");
+        var ingredientsBlock = $("<div>");
+        var pictureDiv = $("<div>");
+        var ingredientDiv = $("<div>");
+        var recipeZone = $("<div>");
+        //for zomato information
+        var footer = $("<div>");
 
-        $(".tab-pane").empty();
+        $("#list-Result1").empty();
+        $.ajax({
+            url: jsonURL,
+            method: "GET"
+        })
+        .then(function (response) {
+            console.log(response);
+            var mealData = response.meals[0];
+            var ingredients = [
+                mealData.strIngredient1,
+                mealData.strIngredient2,
+                mealData.strIngredient3,
+                mealData.strIngredient4,
+                mealData.strIngredient5,
+                mealData.strIngredient6,
+                mealData.strIngredient7,
+                mealData.strIngredient8,
+                mealData.strIngredient9,
+                mealData.strIngredient10,
+                mealData.strIngredient11,
+                mealData.strIngredient12,
+                mealData.strIngredient13,
+                mealData.strIngredient14,
+                mealData.strIngredient15,
+                mealData.strIngredient16,
+                mealData.strIngredient17,
+                mealData.strIngredient18,
+                mealData.strIngredient19,
+                mealData.strIngredient20
+            ];
+            var amounts = [
+                mealData.strMeasure1,
+                mealData.strMeasure2,
+                mealData.strMeasure3,
+                mealData.strMeasure4,
+                mealData.strMeasure5,
+                mealData.strMeasure6,
+                mealData.strMeasure7,
+                mealData.strMeasure8,
+                mealData.strMeasure9,
+                mealData.strMeasure10,
+                mealData.strMeasure11,
+                mealData.strMeasure12,
+                mealData.strMeasure13,
+                mealData.strMeasure14,
+                mealData.strMeasure15,
+                mealData.strMeasure16,
+                mealData.strMeasure17,
+                mealData.strMeasure18,
+                mealData.strMeasure19,
+                mealData.strMeasure20
+            ];
+            var thumbNail=$("<img>");
+            thumbNail.attr("src",mealData.strMealThumb);
+            thumbNail.attr({"height":"150px","width":"150px"});
+            
+            //console.log(amounts);
+            //console.log(ingredients);
+            for (i = 0; i < amounts.length; i++) {
+                if (amounts[i]!=null && ingredients[i]!=null && amounts[i].length > 0 && ingredients[i].length > 0) {
+                   ingredientDiv.append($("<div>").text(ingredients[i]+ ": " +  amounts[i]  ));
+                }
 
-        console.log("-------"); 
-        console.log(mealString); 
-        console.log(mealURL); 
-        console.log(jsonURL);   
-        console.log(mealImageURL);
+            }
+            //display data to the site
+            pictureDiv.prepend(thumbNail);
+            ingredientsBlock.append(pictureDiv,ingredientDiv)
+            ingredientsBlock.attr("class","col-4");
+            recipeZone.text(mealData.strInstructions);
+            recipeZone.attr("class","col-8");
+            contentRow.attr("class","row");
+            footer.text("area for zomato information.");
+            //appended in order to create desired format
+            contentRow.append(ingredientsBlock,recipeZone);
+            contentBlock.append(header,contentRow,footer);
+            $("#list-Result1").append(contentBlock);
 
-        $(".tab-pane").html('<h1>' + mealString + '</h1>');
-        $(".tab-pane").append(mealURL);
-        $(".tab-pane").append('<br>' + jsonURL);
-        $(".tab-pane").append('<br>' + '<img style="width:85%; height:auto;" src = ' + mealImageURL + '>');
+        });
 
 
     });
