@@ -104,7 +104,7 @@ $(document).ready(function() {
         
                         for (var i = 0; i < resultsArea.length; i++){
                         //console.log("Area Recipes: " + resultsArea[i].strMeal);
-                        $("#list-tab").append('<a class="list-group-item list-group-item-action" id="' + resultsArea[i].idMeal + '" data-toggle="list" href="https://www.themealdb.com/meal/' + resultsArea[i].idMeal + '" role="tab" aria-controls="Result'+i+'" data-attr = "' + resultsArea[i].strMeal + '" data-id-attr = "' + resultsArea[i].idMeal + '" data-strMealThumb = "' + resultsArea[i].strMealThumb +'" data-strMeal = "' + resultsArea[i].strMeal +'">' + resultsArea[i].strMeal + '</a>')
+                        $("#list-tab").append('<a  class="list-group-item list-group-item-action" id="' + resultsArea[i].idMeal + '" data-toggle="list" href="https://www.themealdb.com/meal/' + resultsArea[i].idMeal + '" role="tab" aria-controls="Result'+i+'" data-attr = "' + resultsArea[i].strMeal + '" data-id-attr = "' + resultsArea[i].idMeal + '" data-strMealThumb = "' + resultsArea[i].strMealThumb +'" data-strMeal = "' + resultsArea[i].strMeal +'">' + resultsArea[i].strMeal + '</a>')
                         };
                     });
             break;
@@ -132,7 +132,7 @@ $(document).ready(function() {
         $(".tab-pane").html('<h1>' + mealString + '</h1>');
         $(".tab-pane").append(mealURL);
         $(".tab-pane").append('<br>' + jsonURL);
-        $(".tab-pane").append('<br>' + '<img src = ' + mealImageURL + '>');
+        $(".tab-pane").append('<br>' + '<img style="width:85%; height:auto;" src = ' + mealImageURL + '>');
 
 
     });
