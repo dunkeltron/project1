@@ -39,43 +39,49 @@
                 </div>
             </div>
 
-            <!-- Buttons/Tabs for Navigation -->
-            <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="CategoryTab" aria-selected="true">Category</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="AreaTab" aria-selected="false">Area</a>
-                </li>
-            </ul>
+            <!-- Tab Selection -->
+            <div class="row">
+                <div class="col-lg-6 catBack">
+                    <!-- Category Graph-->
+                    <span id="CategoryTab">Category</span>
+                </div>
+
+                <div class="col-lg-6 areaBack">
+                    <!-- Area Graph -->
+                    <span id="AreaTab">Area</span>
+                </div>
+            </div>
 
             <!-- div for class after selecting tab -->
             <div class="selectedTabResults">
                 <div class="row">
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" data-flip="false" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown for Selection
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        </div>
-                    </div>
+                    
                     <!-- Data Visualization Image-->
-                    <div class="col-1"></div>
-                    <!-- category graph-->
-                    <div id="pieChart"></div>
+                    <div class="col-lg-6 pieRow">
+                         <!-- category graph-->
+                        <div id="pieChart"></div>
+                    </div>
 
-                    <!-- area graph -->
-                    <div id="pieChart1"></div>
-
-                    <div class="input"></div>
-
+                    <div class="col-lg-6 pieRow">
+                        <!-- area graph -->
+                        <div id="pieChart1"></div>
+                    </div>
 
                 </div>
 
             </div>
         </div>
+
+        <!-- Dropdown Selection -->
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-flip="false" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown for Selection
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            </div>
+        </div> -->
+
         <br>
         <div id="bot-container">
             <!-- Returned Values -->

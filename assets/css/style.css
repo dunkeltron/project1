@@ -5,12 +5,88 @@
     padding: 20px;
 }
 
+.jumbotron {
+    border-radius:25px !important;
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
 .selectedTabResults,
 .topContainer,
 .submitClearContainer{
-    border: black 1px dashed;
+    /* border: black 1px dashed; */
 }
 
 #recipe-display{
     border: black 1px solid;
 }
+
+.catBack {
+    padding-left:0px !important;
+    padding-right:0x !important;
+    border-top-left-radius: 25px;
+    border-left: lightgrey 1px solid;
+    border-top: lightgrey 1px solid;
+    border-right: lightgrey 0.5px solid;
+    font-size:35px;
+    color:grey;
+    background-color:#cce0ff;
+}
+
+.catBack:hover {
+    color:black;
+    background-color:#b3d1ff;
+}
+
+.areaBack {
+    padding-right:0px !important;
+    padding-left:0px !important;
+    border-top-right-radius: 25px;
+    border-right: lightgrey 1px solid;
+    border-top: lightgrey 1px solid;
+    border-left: lightgrey 0.5px solid;
+    font-size:35px;
+    color:grey;
+    background-color:#d6f5d6;
+}
+
+.areaBack:hover {
+    color:black;
+    background-color:#c2f0c2;
+}
+
+/* Category Chart */
+#pieChart {
+    background-color:#e6f0ff;
+    padding-left:0px !important;
+    padding-right:0px !important;
+    border-left: lightgrey 1px solid;
+    border-right: lightgrey 0.5px solid;
+    border-bottom: lightgrey 1px solid;
+}
+
+#pieChart:hover {
+
+}
+
+/* Area Chart */
+#pieChart1 {
+    background-color:#e6ffe6;
+    padding-right:0px !important;
+    padding-left:0px !important;
+    border-right: lightgrey 1px solid;
+    border-left: lightgrey 0.5px solid;
+    border-bottom: lightgrey 1px solid;
+}
+
+#pieChart:hover {
+
+}
+
+.pieRow {
+    padding:0px !important;
+}
+
+
+
+
