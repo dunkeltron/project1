@@ -29,68 +29,68 @@ var pie = new d3pie("pieChart", {
         "content": [
             {
                 "label": "Beef", //2
-                "value": 218812,
-                "color": "003380"
+                "value": 12.5,
+                "color": "0033cc"
             },
             {
                 "label": "Breakfast",
-                "value": 157618,
-                "color": "#0047b3"
+                "value": 1,
+                "color": "#b3c6ff"
             },
             {
                 "label": "Chicken",
-                "value": 114384,
-                "color": "#005ce6"
+                "value": 15.7,
+                "color": "#002699"
             },
             {
                 "label": "Dessert",
-                "value": 95002,
-                "color": "#1a75ff"
+                "value": 25,
+                "color": "#002080"
             },
             {
                 "label": "Lamb",
-                "value": 36344,
-                "color": "#66a3ff"
+                "value": 4.3,
+                "color": "#1a53ff"
             },
             {
                 "label": "Miscellaneous",
-                "value": 32170,
-                "color": "#80b3ff"
+                "value": 4.8,
+                "color": "#0040ff"
             },
             {
                 "label": "Pasta",
-                "value": 28561,
-                "color": "#99c2ff"
+                "value": 3.2,
+                "color": "#668cff"
             },
             {
                 "label": "Pork", //1
-                "value": 264131,
-                "color": "#002966"
+                "value": 4.3,
+                "color": "#3366ff"
             },
             {
                 "label": "Seafood",
-                "value": 218812,
-                "color": "#003d99"
+                "value": 8.6,
+                "color": "#0039e6"
             },
             {
                 "label": "Side",
-                "value": 157618,
-                "color": "#0052cc"
+                "value": 3.2,
+                "color": "#4d79ff"
             },
             {
                 "label": "Starter",
-                "value": 114384,
-                "color": "#0066ff"
+                "value": 2.1,
+                "color": "#809fff"
             },
             {
                 "label": "Vegan",
-                "value": 95002,
-                "color": "#3385ff"
+                "value": 1.6,
+                "color": "#99b3ff"
             },
             {
                 "label": "Vegetarian",
-                "value": 78327,
-                "color": "#4d94ff"
+                "value": 13,
+                "color": "#002db3"
             }
         ]
     },
