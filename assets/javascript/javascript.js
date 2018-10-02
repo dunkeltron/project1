@@ -4,13 +4,17 @@ $(document).ready(function() {
     $("#pieChart").show();
     $("#pieChart1").show();
 
-
     var queryURL = ""; // declaration of empty queryURL
 
-    $("#CategoryTab").on("click", function () {
+    $(".catBack").on("click", function () {
         console.log("Category Tab Selected");
 
-        $(".dropdown-menu").empty();
+        $("#button-select").empty();
+
+        // scroll           
+        $("body, html").animate({
+            scrollTop: $("#CategoryTab").offset().top
+        }, 1000);
         
     queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
 
@@ -31,14 +35,19 @@ $(document).ready(function() {
                 //console.log(results[i]);
                 var categoryItem= results[i].strCategory;
                 //console.log(i + " " + categoryItem);
-                $(".dropdown-menu").append('<a class="dropdown-item" href="#" data-attr = '+ categoryItem +' data-tab ="category" >' + categoryItem +'</a>');
+                $("#button-select").append('<a class="btn btn-primary btn-lg" href="#" data-attr = '+ categoryItem +' data-tab ="category" >' + categoryItem +'</a>');
             } 
         });
    });
 
-    $("#AreaTab").on("click", function () {
+    $(".areaBack").on("click", function () {
         console.log("Area Tab Selected");
-        $(".dropdown-menu").empty();
+        $("#button-select").empty();
+
+        // scroll           
+        $("body, html").animate({
+            scrollTop: $("#AreaTab").offset().top
+        }, 1000);
 
         queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
 
@@ -59,19 +68,24 @@ $(document).ready(function() {
                     //console.log(results[i]);
                     var areaItem= results[i].strArea;
                     //console.log(i + " " + areaItem);
-                    $(".dropdown-menu").append('<a class="dropdown-item" href="#" data-attr = '+ areaItem +' data-tab ="area" >' + areaItem +'</a>');
+                    $("#button-select").append('<a class="btn btn-success btn-lg" href="#" data-attr = '+ areaItem +' data-tab ="area" >' + areaItem +'</a>');
                 } 
             });
     });
 
-    // click event on selecting a dropdown item
+    // click event on selecting a button item
 
-    $(document).on("click", ".dropdown-item", function () {
+    $(document).on("click", ".btn", function () {
         var selectedValue = this.getAttribute("data-attr"); // stores data attribute of the selected dropdown item
         var selectedCriteria = this.getAttribute("data-tab"); // stores the data attribute of the category where the dropdown was selected from
         console.log(this.getAttribute("data-attr") + " sub-section selected by user.");
         //console.log(this.getAttribute("data-tab"));
         $("#list-tab").empty();
+
+        // scroll           
+        $("body, html").animate({
+            scrollTop: $("#recipe-list").offset().top
+        }, 1000);
 
         switch(selectedCriteria){
             case "category":
@@ -131,6 +145,13 @@ $(document).ready(function() {
         var footer = $("<div>");
 
         $("#list-Result1").empty();
+
+        // scroll           
+        $("body, html").animate({
+            scrollTop: $("#recipe-display").offset().top
+        }, 1000);
+        
+
         $.ajax({
             url: jsonURL,
             method: "GET"
