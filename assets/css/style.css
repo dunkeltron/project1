@@ -9,7 +9,6 @@ body {
     padding: 20px;
 }
 
-
 .jumbotron {
     border-radius:25px !important;
 }
@@ -20,9 +19,6 @@ body {
 
 .catBack {
     border-top-left-radius: 25px;
-    border-left: lightgrey 1px solid;
-    border-top: lightgrey 1px solid;
-    border-right: lightgrey 0.5px solid;
     font-size:35px;
     color:grey;
     background-color:#cce0ff;
@@ -35,9 +31,6 @@ body {
 
 .areaBack {
     border-top-right-radius: 25px;
-    border-right: lightgrey 1px solid;
-    border-top: lightgrey 1px solid;
-    border-left: lightgrey 0.5px solid;
     font-size:35px;
     color:grey;
     background-color:#d6f5d6;
@@ -51,17 +44,11 @@ body {
 /* Category Chart */
 #pieChart {
     background-color:#e6f0ff;
-    border-left: lightgrey 1px solid;
-    border-right: lightgrey 0.5px solid;
-    border-bottom: lightgrey 1px solid;
 }
 
 /* Area Chart */
 #pieChart1 {
     background-color:#e6ffe6;
-    border-right: lightgrey 1px solid;
-    border-left: lightgrey 0.5px solid;
-    border-bottom: lightgrey 1px solid;
 }
 
 .col-lg-6.nopaddingPanel {

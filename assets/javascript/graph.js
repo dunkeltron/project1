@@ -1,4 +1,6 @@
 //Data Visualization Code Only
+
+//Category Pie Chart
 var pie = new d3pie("pieChart", {
     "header": {
         // "title": {
@@ -28,7 +30,7 @@ var pie = new d3pie("pieChart", {
         "sortOrder": "value-desc",
         "content": [
             {
-                "label": "Beef", //2
+                "label": "Beef",
                 "value": 12.5,
                 "color": "0033cc"
             },
@@ -63,7 +65,7 @@ var pie = new d3pie("pieChart", {
                 "color": "#668cff"
             },
             {
-                "label": "Pork", //1
+                "label": "Pork",
                 "value": 4.3,
                 "color": "#3366ff"
             },
@@ -135,6 +137,7 @@ var pie = new d3pie("pieChart", {
     }
 });
 
+//Area Pie Chart
 var pie1 = new d3pie("pieChart1", {
 	"header": {
 		// "title": {
