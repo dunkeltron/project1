@@ -1,18 +1,18 @@
 //Data Visualization Code Only
 var pie = new d3pie("pieChart", {
     "header": {
-        "title": {
-            "text": "Food Options",
-            "fontSize": 24,
-            "font": "open sans"
-        },
-        "subtitle": {
-			"text": "184 Choices",
-			"color": "#999999",
-			"fontSize": 12,
-			"font": "open sans"
-		},
-        "titleSubtitlePadding": 9
+        // "title": {
+        //     "text": "Category Options",
+        //     "fontSize": 24,
+        //     "font": "open sans"
+        // },
+        // "subtitle": {
+		// 	"text": "184 Choices",
+		// 	"color": "#999999",
+		// 	"fontSize": 12,
+		// 	"font": "open sans"
+		// },
+        // "titleSubtitlePadding": 9
     },
     "footer": {
         "color": "#999999",
@@ -102,15 +102,16 @@ var pie = new d3pie("pieChart", {
             "hideWhenLessThanPercentage": 3
         },
         "mainLabel": {
-            "fontSize": 11
+            "fontSize": 15
         },
         "percentage": {
             "color": "#ffffff",
-            "decimalPlaces": 0
+			"decimalPlaces": 0,
+			"fontSize": 12
         },
         "value": {
             "color": "#adadad",
-            "fontSize": 11
+            "fontSize": 13
         },
         "lines": {
             "enabled": true
@@ -122,8 +123,8 @@ var pie = new d3pie("pieChart", {
     "effects": {
         "pullOutSegmentOnClick": {
             "effect": "linear",
-            "speed": 400,
-            "size": 8
+            "speed": 300,
+            "size": 14
         }
     },
     "misc": {
@@ -136,18 +137,18 @@ var pie = new d3pie("pieChart", {
 
 var pie1 = new d3pie("pieChart1", {
 	"header": {
-		"title": {
-			"text": "Area Options",
-			"fontSize": 24,
-			"font": "open sans"
-		},
-		"subtitle": {
-			"text": "184 Choices",
-			"color": "#999999",
-			"fontSize": 12,
-			"font": "open sans"
-		},
-		"titleSubtitlePadding": 9
+		// "title": {
+		// 	"text": "Area Options",
+		// 	"fontSize": 24,
+		// 	"font": "open sans"
+		// },
+		// "subtitle": {
+		// 	"text": "184 Choices",
+		// 	"color": "#999999",
+		// 	"fontSize": 12,
+		// 	"font": "open sans"
+		// },
+		// "titleSubtitlePadding": 9
 	},
 	"footer": {
 		"color": "#999999",
@@ -272,15 +273,16 @@ var pie1 = new d3pie("pieChart1", {
 			"hideWhenLessThanPercentage": 3
 		},
 		"mainLabel": {
-			"fontSize": 11
+			"fontSize": 15
 		},
 		"percentage": {
 			"color": "#ffffff",
-			"decimalPlaces": 0
+			"decimalPlaces": 0,
+			"fontSize": 12
 		},
 		"value": {
 			"color": "#adadad",
-			"fontSize": 11
+			"fontSize": 13
 		},
 		"lines": {
 			"enabled": true
@@ -292,8 +294,8 @@ var pie1 = new d3pie("pieChart1", {
 	"effects": {
 		"pullOutSegmentOnClick": {
 			"effect": "linear",
-			"speed": 400,
-			"size": 8
+			"speed": 300,
+            "size": 14
 		}
 	},
 	"misc": {
