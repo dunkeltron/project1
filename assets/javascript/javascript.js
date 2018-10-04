@@ -129,7 +129,8 @@ $(document).ready(function () {
 
     });
 
-    $(document).on("click", ".list-group-item", function () {
+    $(document).on("click", ".list-group-item", function (event) {
+        event.preventDefault();
         var mealString = this.getAttribute("data-strMeal");
         var mealURL = "https://www.themealdb.com/meal/" + this.getAttribute("id");
         var jsonURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + this.getAttribute("data-id-attr");
@@ -216,10 +217,12 @@ $(document).ready(function () {
                 pictureDiv.prepend(thumbNail);
                 pictureDiv.addClass("col-xs-12");
                 ingredientDiv.addClass("col-xs-12 ")
-                ingredientsBlock.append(pictureDiv, ingredientDiv)
-                ingredientsBlock.addClass("col-xs-12 col-sm-3");
-                recipeZone.text("Instructions. \n" + mealData.strInstructions);
-                recipeZone.addClass("col-sm-8 col-xs-12 float-right");
+                ingredientsBlock.addClass("col-xs-12 col-sm-4");
+                ingredientsBlock.append(pictureDiv, ingredientDiv);
+                recipeZone.append($("<div>").text("Instructions."));
+                recipeZone.text(mealData.strInstructions);
+                //button.css({ "background-color": "#ffe", "border-left": "5px solid #ccc" });
+                recipeZone.addClass("col-sm-8 col-xs-12 padding-left-0");
                 contentRow.addClass("row");
                 button.attr("id", "modalBtn");
                 button.attr("class", "button");

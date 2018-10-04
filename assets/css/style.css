@@ -72,3 +72,6 @@ body {
 #recipe-display {
     background-color:whitesmoke;
 }
+.padding-left-0{
+    padding-left:0px !important;
+}
