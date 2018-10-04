@@ -3,12 +3,17 @@ $(document).ready(function () {
 
     $("#pieChart").show();
     $("#pieChart1").show();
+    $("#button-select").hide();
+    $("#recipe-list").hide();
+    $("#recipe-display").hide();
 
     var queryURL = ""; // declaration of empty queryURL
+    var mealIdValue = "";
+    var mealRegion = ""; 
 
     $(".catBack").on("click", function () {
         console.log("Category Tab Selected");
-
+        $("#button-select").show();
         $("#button-select").empty();
 
         // scroll           
@@ -42,6 +47,7 @@ $(document).ready(function () {
 
     $(".areaBack").on("click", function () {
         console.log("Area Tab Selected");
+        $("#button-select").show();
         $("#button-select").empty();
 
         // scroll           
@@ -80,6 +86,8 @@ $(document).ready(function () {
         var selectedCriteria = this.getAttribute("data-tab"); // stores the data attribute of the category where the dropdown was selected from
         console.log(this.getAttribute("data-attr") + " sub-section selected by user.");
         //console.log(this.getAttribute("data-tab"));
+        $("#recipe-list").show();
+        $("#recipe-display").show();
         $("#list-tab").empty();
 
         // scroll           
@@ -133,6 +141,7 @@ $(document).ready(function () {
         event.preventDefault();
         var mealString = this.getAttribute("data-strMeal");
         var mealURL = "https://www.themealdb.com/meal/" + this.getAttribute("id");
+        mealIdValue = this.getAttribute("data-id-attr");
         var jsonURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + this.getAttribute("data-id-attr");
         var mealImageURL = this.getAttribute("data-strMealThumb");
         var header = $('<h1>' + mealString + '</h1>');
@@ -142,6 +151,8 @@ $(document).ready(function () {
         var pictureDiv = $("<div>");
         var ingredientDiv = $("<div>");
         var recipeZone = $("<div>");
+        
+        
         //for zomato information
         var footer = $("<div>");
         var button = $("<button>");
@@ -154,6 +165,7 @@ $(document).ready(function () {
             .then(function (response) {
                 console.log(response);
                 var mealData = response.meals[0];
+                mealRegion = mealData.strArea;
                 var ingredients = [
                     mealData.strIngredient1,
                     mealData.strIngredient2,
@@ -225,17 +237,57 @@ $(document).ready(function () {
                 recipeZone.addClass("col-sm-8 col-xs-12 padding-left-0");
                 contentRow.addClass("row");
                 button.attr("id", "modalBtn");
-                button.attr("class", "button");
-                button.text("Click here for zomato");
+                button.attr("class", "btn-danger");
+                button.attr("type", "button");
+                button.attr("data-toggle", "modal");
+                button.text("Click here for Zomato recommendation");
                 //appended in order to create desired format
                 footer.append(button);
                 contentRow.append(ingredientsBlock, recipeZone);
                 contentBlock.append(header, contentRow, footer);
                 $("#list-Result1").append(contentBlock);
 
+                // Zomato
+                $(document).on("click", "#modalBtn", function (event) {
+                    event.preventDefault;
+
+                    var zomatoAPIkey = "dd597b949ad3061e6dae13b560b4afd0"
+                    var zomatoQueryURL ="https://developers.zomato.com/api/v2.1/search?q=" + mealRegion + "&count=1&apikey=" + zomatoAPIkey
+                     
+                   $.ajax({
+                       url: zomatoQueryURL,
+                       method: "GET"
+                                   
+                       })
+                       .then(function (response){
+                           console.log(response);
+
+                           var zomatoResponse = response.restaurants[0].restaurant;
+                           console.log(zomatoResponse.name);
+                           console.log(zomatoResponse.location);
+
+                    $("#exampleModalCenter").modal();
+                    $("#exampleModalLongTitle").html("A nearby " + mealRegion + " option recommended by our friends at Zomato");
+                    $("#modalTextGoesHere").html('<strong>' + zomatoResponse.name + '</strong>' + '<br>');
+                    $("#modalTextGoesHere").append("Address: " + zomatoResponse.location.address + '<br>');
+                    $("#modalTextGoesHere").append("Cuisines: " + zomatoResponse.cuisines + '<br>');
+
+                       })
+                       .fail(function(xhr) {
+                        var httpStatus = (xhr.status);
+                        var ajaxError = 'There was an requesting the call back. HTTP Status: ' + httpStatus;
+                        console.log('ajaxError: ' + ajaxError); 
+
+                        $("#exampleModalCenter").modal();
+                        $("#exampleModalLongTitle").html("Error!");
+                        $("#modalTextGoesHere").html("Sorry! Zomato could not complete the request. Please select a different recipe from the list, a different category or a differnt area." + '<br>');
+                        $("#modalTextGoesHere").append(ajaxError + '<br>');
+
+                    });
+
+                });
             });
+        });
 
-
-    });
 
 });
