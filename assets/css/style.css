@@ -64,7 +64,11 @@ body {
     padding-bottom: 20px;
     background-color: #e9ecef;
 }
-
+h1{
+    background-color: rgba(255, 243, 81, 0.5);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
 #recipe-display {
     background-color:whitesmoke;
     border-radius: 10px;
