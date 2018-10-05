@@ -13,10 +13,6 @@ body {
     border-radius:25px !important;
 }
 
-#recipe-display{
-    border: black 1px solid;
-}
-
 .catBack {
     border-top-left-radius: 25px;
     font-size:35px;
@@ -71,7 +67,17 @@ body {
 
 #recipe-display {
     background-color:whitesmoke;
+    border-radius: 10px;
 }
 .padding-left-0{
     padding-left:0px !important;
+}
+
+#exampleModalLongTitle{
+    text-align:center;
+}
+
+#modalBtn{
+    width: auto;
+    margin: auto;
 }
