@@ -69,10 +69,19 @@ body {
     background-color:whitesmoke;
     border-radius: 10px;
 }
+#recipe-list{
+    padding-right:15px;
+
+}
 .padding-left-0{
     padding-left:0px !important;
 }
-
+.padding-0{
+    padding: 0px !important;
+}
+.margin-right-15{
+    margin-right: 15px !important;
+}
 #exampleModalLongTitle{
     text-align:center;
 }
