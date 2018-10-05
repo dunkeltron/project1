@@ -105,9 +105,25 @@ body {
 .margin-right-15{
     margin-right: 15px !important;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1460px) {
+    .col-mdlg-12{
+        width:200% !important;
+        height:auto !important;
+    }
+}
+@media only screen and (max-width: 760px) {
     #recipe-list{
         padding-right:0px;
+    }
+    #pieChart{
+        display:none;
+    }
+    #pieChart1{
+        display:none;
+    }
+    .areaBack {
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
     }
     
 }
