@@ -232,7 +232,8 @@ $(document).ready(function () {
                 recipeZone.append($("<div>").text("Instructions."));
                 recipeZone.text(mealData.strInstructions);
                 //button.css({ "background-color": "#ffe", "border-left": "5px solid #ccc" });
-                recipeZone.addClass("col-sm-8 col-xs-12 padding-left-0");
+                recipeZone.addClass("col-sm-8 col-xs-12 ");
+                recipeZone.attr("id","instructions-tab");
                 contentRow.addClass("row");
                 button.attr("id", "modalBtn");
                 button.attr("class", "btn-danger");

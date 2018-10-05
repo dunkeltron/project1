@@ -77,15 +77,6 @@ body {
     padding-right:15px;
 
 }
-.padding-left-0{
-    padding-left:0px !important;
-}
-.padding-0{
-    padding: 0px !important;
-}
-.margin-right-15{
-    margin-right: 15px !important;
-}
 #exampleModalLongTitle{
     text-align:center;
 }
@@ -95,9 +86,22 @@ body {
     width: 75%;
     border: 2px solid black;
 }
+#instructions-tab{
+    padding-left:30px;
+    padding-right:30px;
+}
 #modalBtn{
     width: auto;
     margin: auto;
+}
+.padding-left-0{
+    padding-left:0px !important;
+}
+.padding-0{
+    padding: 0px !important;
+}
+.margin-right-15{
+    margin-right: 15px !important;
 }
 @media only screen and (max-width: 750px) {
     #recipe-list{
