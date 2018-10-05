@@ -213,10 +213,8 @@ $(document).ready(function () {
                 $("#list-Result1").empty();
                 var thumbNail = $("<img>");
                 thumbNail.attr("src", mealData.strMealThumb);
-                thumbNail.attr({
-                    "height": "150px",
-                    "width": "150px"
-                });
+                thumbNail.attr("id","recipe-thumbnail");
+                
 
                 ingredientDiv.append($("<div>").text("Ingredients."));
                 for (i = 0; i < amounts.length; i++) {

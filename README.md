@@ -1,4 +1,4 @@
-# project1 presentation October 3rd
+# project1 presentation October 6th
 # To assist the user in deciding what meal they should have based on parameters selected by the user (meal ethnicity, ingredients, and/or category {breakfast, lunch, dessert, etc.}),  One api is related to the receipe the other api is related to the possible provider(grocery store or restaurant)
 APIs to be used: 
 1. https://www.themealdb.com/api.php

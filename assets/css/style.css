@@ -64,20 +64,43 @@ body {
     padding-bottom: 20px;
     background-color: #e9ecef;
 }
-
+h1{
+    background-color: rgba(255, 243, 81, 0.5);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
 #recipe-display {
     background-color:whitesmoke;
     border-radius: 10px;
 }
+#recipe-list{
+    padding-right:15px;
+
+}
 .padding-left-0{
     padding-left:0px !important;
 }
-
+.padding-0{
+    padding: 0px !important;
+}
+.margin-right-15{
+    margin-right: 15px !important;
+}
 #exampleModalLongTitle{
     text-align:center;
 }
-
+#recipe-thumbnail{
+    border-radius: 10px;
+    height:auto;
+    width: 75%;
+    border: 2px solid black;
+}
 #modalBtn{
     width: auto;
     margin: auto;
+}
+@media only screen and (max-width: 750px) {
+    #recipe-list{
+        padding-right:0px;
+    }
 }
