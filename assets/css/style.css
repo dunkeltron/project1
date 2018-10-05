@@ -40,11 +40,13 @@ body {
 /* Category Chart */
 #pieChart {
     background-color:#e6f0ff;
+    border-bottom-left-radius:25px; 
 }
 
 /* Area Chart */
 #pieChart1 {
     background-color:#e6ffe6;
+    border-bottom-right-radius:25px; 
 }
 
 .col-lg-6.nopaddingPanel {
@@ -106,5 +108,22 @@ body {
 @media only screen and (max-width: 750px) {
     #recipe-list{
         padding-right:0px;
+    }
+    
+}
+@media only screen and (max-width: 990px) {
+    .catBack {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .areaBack {
+        border-top-right-radius: 0px;
+    }
+    #pieChart{
+        border-bottom-left-radius: 0px;
+    }
+    #pieChart1{
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
     }
 }
