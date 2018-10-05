@@ -144,7 +144,7 @@ $(document).ready(function () {
         mealIdValue = this.getAttribute("data-id-attr");
         var jsonURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + this.getAttribute("data-id-attr");
         var mealImageURL = this.getAttribute("data-strMealThumb");
-        var header = $('<h1>' + mealString + '</h1>');
+        var header = $('<h1>' + mealString + '</h1>').attr("id","recipe-title");
         var contentBlock = $("<div>");
         var contentRow = $("<div>");
         var ingredientsBlock = $("<div>");
