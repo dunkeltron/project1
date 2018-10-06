@@ -40,11 +40,15 @@ body {
 /* Category Chart */
 #pieChart {
     background-color:#e6f0ff;
+    border-bottom-left-radius:25px; 
+    display:block;
 }
 
 /* Area Chart */
 #pieChart1 {
     background-color:#e6ffe6;
+    border-bottom-right-radius:25px; 
+    display:block;
 }
 
 .col-lg-6.nopaddingPanel {
@@ -64,20 +68,121 @@ body {
     padding-bottom: 20px;
     background-color: #e9ecef;
 }
-
+#recipe-title{
+    background-color: rgb(66,139,202);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-bottom:5px;
+    color: rgba(0,0,0, .65);
+}
 #recipe-display {
     background-color:whitesmoke;
     border-radius: 10px;
 }
-.padding-left-0{
-    padding-left:0px !important;
-}
+#recipe-list{
+    padding-right:15px;
 
+}
 #exampleModalLongTitle{
     text-align:center;
 }
-
+#recipe-thumbnail{
+    border-radius: 10px;
+    height:auto;
+    width: 75%;
+    border: 2px solid rgb(66,139,202);
+}
+#instructions-tab{
+    padding-left:30px;
+    padding-right:30px;
+}
 #modalBtn{
     width: auto;
     margin: auto;
+}
+.padding-left-0{
+    padding-left:0px !important;
+}
+.padding-0{
+    padding: 0px !important;
+}
+.margin-right-15{
+    margin-right: 15px !important;
+}
+@media only screen and (max-width: 1460px) {
+    /* This is where we need to break the graphs into one column*/
+    .selectedTabResults{
+        justify-content: center !important;
+    }
+    #catDiv{
+        
+        margin-right:10px !important;
+        width:200% !important;
+    }
+    .catBack {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width:200% !important;
+    }
+    .areaBack {
+        border-top-right-radius: 0px;
+        width:200% !important;
+    }
+    #pieChart{
+        border-bottom-left-radius: 0px;
+        width:200% !important;
+    }
+    #pieChart1{
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width:200% !important;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    #catDiv{
+        width:100% !important;
+        margin-right:0px !important;
+    }
+    .catBack {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width:100% !important;
+    }
+    .areaBack {
+        border-top-right-radius: 0px;
+        width:100% !important;
+    }
+    #pieChart{
+        border-bottom-left-radius: 0px;
+        width:100% !important;
+    }
+    #pieChart1{
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width:100% !important;
+    }
+}
+@media only screen and (max-width: 760px) {
+    #recipe-list{
+        padding-right:0px;
+    }
+    #pieChart{
+        display:none;
+        visibility: hidden;
+        height:0px;
+    }
+    #pieChart1{
+        display:none;
+        visibility: hidden;
+        height:0px;
+    }
+    svg{
+        visibility: hidden;
+    }
+    .areaBack {
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    
 }
