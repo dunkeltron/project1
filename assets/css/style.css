@@ -69,10 +69,11 @@ body {
     background-color: #e9ecef;
 }
 #recipe-title{
-    background-color: rgba(255, 253, 107, 0.863);
+    background-color: rgb(66,139,202);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    padding-bottom:3px;
+    padding-bottom:5px;
+    color: rgba(0,0,0, .65);
 }
 #recipe-display {
     background-color:whitesmoke;
