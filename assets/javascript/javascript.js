@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    //console.log("ready!");
 
     $("#pieChart").show();
     $("#pieChart1").show();
@@ -12,7 +11,6 @@ $(document).ready(function () {
     var mealRegion = "";
 
     $(".catBack").on("click", function () {
-        //console.log("Category Tab Selected");
         $("#button-select").show();
         $("#button-select").empty();
 
@@ -32,21 +30,14 @@ $(document).ready(function () {
                 // Storing an array of results in the results variable
                 var results = response.meals;
 
-                //console.log(results);
-                //console.log("Length of Array: " + results.length + " items for Category Tab");
-                //console.log(categoryItem);
-
                 for (var i = 0; i < results.length; i++) {
-                    //console.log(results[i]);
                     var categoryItem = results[i].strCategory;
-                    //console.log(i + " " + categoryItem);
                     $("#button-select").append('<a class="btn btn-primary btn-lg" href="#" data-attr = ' + categoryItem + ' data-tab ="category" >' + categoryItem + '</a>');
                 }
             });
     });
 
     $(".areaBack").on("click", function () {
-        ////console.log("Area Tab Selected");
         $("#button-select").show();
         $("#button-select").empty();
 
@@ -66,14 +57,8 @@ $(document).ready(function () {
                 // Storing an array of results in the results variable
                 var results = response.meals;
 
-                ////console.log(results);
-                ////console.log("Length of Array: " + results.length + " items for Area Tab");
-                ////console.log(areaItem);
-
                 for (var i = 0; i < results.length; i++) {
-                    ////console.log(results[i]);
                     var areaItem = results[i].strArea;
-                    ////console.log(i + " " + areaItem);
                     $("#button-select").append('<a class="btn btn-success btn-lg" href="#" data-attr = ' + areaItem + ' data-tab ="area" >' + areaItem + '</a>');
                 }
             });
@@ -84,8 +69,7 @@ $(document).ready(function () {
     $(document).on("click", ".btn", function () {
         var selectedValue = this.getAttribute("data-attr"); // stores data attribute of the selected dropdown item
         var selectedCriteria = this.getAttribute("data-tab"); // stores the data attribute of the category where the dropdown was selected from
-        ////console.log(this.getAttribute("data-attr") + " sub-section selected by user.");
-        ////console.log(this.getAttribute("data-tab"));
+
         $("#recipe-list").show();
         $("#recipe-display").show();
         $("#list-tab").empty();
@@ -107,7 +91,6 @@ $(document).ready(function () {
                         var resultsCategory = response.meals;
                         // Storing an array of results in the results variable
                         for (var i = 0; i < resultsCategory.length; i++) {
-                            // //console.log("Category Recipes: " + resultsCategory[i].strMeal);
                             $("#list-tab").append('<a class="list-group-item list-group-item-action" id="' + resultsCategory[i].idMeal + '" data-toggle="list" href="https://www.themealdb.com/meal/' + resultsCategory[i].idMeal + '" role="tab" aria-controls="Result' + i + '" data-attr = "' + resultsCategory[i].strMeal + '" data-id-attr = "' + resultsCategory[i].idMeal + '" data-strMealThumb = "' + resultsCategory[i].strMealThumb + '" data-strMeal = "' + resultsCategory[i].strMeal + '">' + resultsCategory[i].strMeal + '</a>')
                         };
                     });
@@ -125,7 +108,6 @@ $(document).ready(function () {
                         // Storing an array of results in the results variable
 
                         for (var i = 0; i < resultsArea.length; i++) {
-                            ////console.log("Area Recipes: " + resultsArea[i].strMeal);
                             $("#list-tab").append('<a  class="list-group-item list-group-item-action" id="' + resultsArea[i].idMeal + '" data-toggle="list" href="https://www.themealdb.com/meal/' + resultsArea[i].idMeal + '" role="tab" aria-controls="Result' + i + '" data-attr = "' + resultsArea[i].strMeal + '" data-id-attr = "' + resultsArea[i].idMeal + '" data-strMealThumb = "' + resultsArea[i].strMealThumb + '" data-strMeal = "' + resultsArea[i].strMeal + '">' + resultsArea[i].strMeal + '</a>')
                         };
                     });
@@ -152,18 +134,15 @@ $(document).ready(function () {
         var ingredientDiv = $("<div>");
         var recipeZone = $("<div>");
 
-
         //for zomato information
         var footer = $("<div>");
         var button = $("<button>");
-
 
         $.ajax({
             url: jsonURL,
             method: "GET"
         })
             .then(function (response) {
-                //console.log(response);
                 var mealData = response.meals[0];
                 mealRegion = mealData.strArea;
                 //the ingredients and amounts are stored as individual attributes in the API response 
@@ -217,7 +196,6 @@ $(document).ready(function () {
                 thumbNail.attr("src", mealData.strMealThumb);
                 thumbNail.attr("id", "recipe-thumbnail");
 
-
                 ingredientDiv.append($("<div>").text("Ingredients."));
                 for (i = 0; i < amounts.length; i++) {
                     if (amounts[i] != null && ingredients[i] != null && amounts[i].length > 0 && ingredients[i].length > 0) {
@@ -261,11 +239,8 @@ $(document).ready(function () {
 
                     })
                         .then(function (response) {
-                            //console.log(response);
 
                             var zomatoResponse = response.restaurants[0].restaurant;
-                            //console.log(zomatoResponse.name);
-                            //console.log(zomatoResponse.location);
 
                             $("#exampleModalCenter").modal();
                             $("#exampleModalLongTitle").html("A nearby " + mealRegion + " option recommended by our friends at Zomato");
@@ -277,7 +252,6 @@ $(document).ready(function () {
                         .fail(function (xhr) {
                             var httpStatus = (xhr.status);
                             var ajaxError = 'There was an requesting the call back. HTTP Status: ' + httpStatus;
-                            //console.log('ajaxError: ' + ajaxError); 
 
                             $("#exampleModalCenter").modal();
                             $("#exampleModalLongTitle").html("Error!");
@@ -289,6 +263,5 @@ $(document).ready(function () {
                 });
             });
     });
-
 
 });
